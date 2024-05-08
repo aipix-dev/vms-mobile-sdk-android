@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/viewBottomTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner_top"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        tools:visibility="invisible">
+
+        <include
+            android:id="@+id/viewTopBottomSheet"
+            layout="@layout/sdk_view_top_bottom_sheet" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lnrHh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/_A6AAB4"
+                    android:textSize="@dimen/_12sp"
+                    app:locTagText="hours_big" />
+
+                <NumberPicker
+                    android:id="@+id/timeHh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/_8dp"
+                android:text=":"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_20sp" />
+
+            <LinearLayout
+                android:id="@+id/lnrMm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/_A6AAB4"
+                    android:textSize="@dimen/_12sp"
+                    app:locTagText="minutes_big" />
+
+                <NumberPicker
+                    android:id="@+id/timeMm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timeSsDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/_8dp"
+                android:text=":"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_20sp" />
+
+            <LinearLayout
+                android:id="@+id/lnrSs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/_A6AAB4"
+                    android:textSize="@dimen/_12sp"
+                    app:locTagText="seconds_big" />
+
+                <NumberPicker
+                    android:id="@+id/timeSs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timeDone"
+            style="@style/ClickRippleBack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                app:srcCompat="@drawable/ic_check_speed"
+                app:tint="@color/colorPrimary" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/tvTimeInDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sp"
+                app:locTagText="done" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

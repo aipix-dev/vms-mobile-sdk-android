@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.demo.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_cameras"
+            app:destination="@id/navigation_cameras" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cameras"
+        android:name="com.example.demo.ui.cameras.CamerasFragment"
+        android:label="@string/title_cameras"
+        tools:layout="@layout/fragment_cameras" />
+</navigation>

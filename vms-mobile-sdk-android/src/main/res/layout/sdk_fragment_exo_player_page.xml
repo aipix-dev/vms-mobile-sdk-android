@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/black_player_bg">
+
+        <FrameLayout
+            android:id="@+id/mainFrameExo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.mobile.vms.player.zoom.ZoomableTextureView
+                android:id="@+id/vmsPlayerView"
+                android:layout_width="wrap_content"
+                android:layout_height="264dp"
+                android:layout_gravity="center"
+                app:maxScale="8"
+                app:minScale="1" />
+
+            <ProgressBar
+                android:id="@+id/pbPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/viewBottomMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner_top"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <include
+            android:id="@+id/viewTopBottomSheet"
+            layout="@layout/sdk_view_top_bottom_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMorePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10dp" />
+
+    </LinearLayout>
+
+</layout>

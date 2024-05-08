@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/itemMorePlayer"
+        style="@style/ClickRippleFront"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_56dp"
+        android:padding="@dimen/_16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemIvMore"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_gravity="center_vertical" />
+
+        <FrameLayout
+            android:id="@+id/itemIvFlMore"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_13dp"
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/ic_speed"
+                app:tint="@color/txt_black" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/itemSpeedCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_11dp"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_10sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/itemTvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold"
+                tools:text="dfgdfgdfgdfgdfgdfgd fgdfgdfgdfgdfgdfg"
+                tools:visibility="visible" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/itemTvNameAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/txt_black_50"
+                android:textSize="@dimen/_16sp"
+                android:visibility="gone"
+                tools:text="dfgdfgdfgdfg"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,46 @@
+package com.mobile.vms.socket
+
+const val TOKEN_PUSH = "App\\Events\\TokenPush"
+const val USER_PUSH = "App\\Events\\UserPush"
+const val INTERCOM_PUSH = "Illuminate\\Notifications\\Events\\BroadcastNotificationCreated"
+const val LOGOUT_PUSH = "logout"
+const val INTERCOM_CANCEL = "intercom_cancel"
+const val PERMISSIONS_UPDATED = "permissions_updated"
+const val CAMERA_FAVORITE_STORE = "camera.store_favorite"
+const val CAMERA_FAVORITE_DESTROY = "camera.destroy_favorite"
+const val CAMERAS_UPDATED = "cameras_updated"
+const val GROUPS_UPDATED = "groups_updated"
+const val CAMERA_GROUPS_SYNCED = "camera_groups_synced"
+const val GROUP_STORE = "groups_created"
+const val GROUP_DESTROY = "groups_deleted"
+const val MARK_UPDATED = "mark_updated"
+const val MARK_CREATED = "mark_created"
+const val MARK_DELETED = "mark_deleted"
+const val INTERCOM_KEY_CONFIRMED = "intercom.key_confirmed"
+const val INTERCOM_KEY_ERROR = "intercom.key_error"
+const val INTERCOM_ADD_ERROR = "intercom.add_error"
+const val ARCHIVE_GENERATED = "archive_generated"
+const val INTERCOM_ADD = "intercom.add" //not activated intercom from INTERCOM_KEY_CONFIRMED
+const val INTERCOM_STORE = "intercom.store"
+const val INTERCOM_RENAME = "intercom.rename"
+const val INTERCOM_UPDATE = "intercom.update"
+const val INTERCOM_DELETE = "intercom.delete"
+const val INTERCOM_CODE_STORE = "intercom.code.store"
+const val INTERCOM_CODE_DELETE = "intercom.code.delete"
+const val INTERCOM_CALL_STORE = "intercom.call.store"
+const val INTERCOM_CALL_DELETE = "intercom.call.delete"
+const val ANALYTIC_CASE_MOTION_DETECT_EVENT_CREATED = "analytic_case_motion_detect_event_created"
+const val ANALYTIC_CASE_LINE_INTERSECTION_EVENT_CREATED =
+	"analytic_case_line_intersection_event_created"
+const val ANALYTIC_CASE_SMOKE_FIRE_EVENT_CREATED = "analytic_case_smoke_fire_event_created"
+const val ANALYTIC_CASE_LOUD_SOUND_EVENT_CREATED = "analytic_case_loud_sound_event_created"
+const val ANALYTIC_CASE_CAMERA_OBSTACLE_EVENT_CREATED =
+	"analytic_case_camera_obstacle_event_created"
+const val ANALYTIC_CASE_FACE_EVENT_CREATED = "analytic_case_face_event_created"
+const val ANALYTIC_CASE_LICENSE_PLATE_EVENT_CREATED = "analytic_case_license_plate_event_created"
+const val ANALYTIC_CASE_PERSON_COUNTING_EVENT_CREATED =
+	"analytic_case_person_counting_event_created"
+const val ANALYTIC_CASE_VISITOR_COUNTING_EVENT_CREATED =
+	"analytic_case_visitor_counting_event_created"
+const val ANALYTIC_CASE_CONTAINER_NUMBER_RECOGNITION_EVENT_CREATED =
+	"analytic_case_container_number_recognition_event_created"

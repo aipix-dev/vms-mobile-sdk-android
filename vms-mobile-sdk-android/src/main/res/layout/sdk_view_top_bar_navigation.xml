@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/lnrTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/_1F2128_90"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_44dp"
+            android:layout_marginEnd="@dimen/_16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBackTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="@dimen/_12dp"
+                android:paddingTop="@dimen/_6dp"
+                android:paddingEnd="@dimen/_12dp"
+                android:paddingBottom="@dimen/_6dp"
+                app:srcCompat="@drawable/ic_back"
+                android:visibility="visible"
+                app:tint="@color/white" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/txtCameraNameTopBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="44dp"
+                android:ellipsize="end"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp"
+                tools:text="Camera_name" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/frBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32dp"
+            android:layout_marginStart="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTimeTopBarLive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/_14sp"
+                tools:text="20.12.1990 13.00.01" />
+
+            <TextView
+                android:id="@+id/tvTimeTopBarArchive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_14sp"
+                android:visibility="gone"
+                tools:text="20.12.1990 10.00.01" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/frLive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                    android:id="@+id/txtLive"
+                    style="@style/ClickRippleBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top|center_horizontal"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_14dp"
+                    android:paddingEnd="@dimen/_14dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold"
+                    tools:text="LIVE"
+                    app:locTagText="live" />
+
+                <View
+                    android:id="@+id/viewLineLive"
+                    android:layout_width="42dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/colorPrimary" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frArchive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                    android:id="@+id/txtArchive"
+                    style="@style/ClickRippleBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="top|center_horizontal"
+                    android:paddingStart="@dimen/_14dp"
+                    android:paddingEnd="@dimen/_14dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sp"
+                    tools:text="ARCHIVE"
+                    app:locTagText="archive" />
+
+                <View
+                    android:id="@+id/viewLineArchive"
+                    android:layout_width="52dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/yellow"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

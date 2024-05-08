@@ -1,0 +1,25 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!--            <corners-->
+            <!--                android:bottomLeftRadius="@dimen/s"-->
+            <!--                android:bottomRightRadius="@dimen/s"-->
+            <!--                android:topLeftRadius="@dimen/s"-->
+            <!--                android:topRightRadius="@dimen/s" />-->
+
+            <solid android:color="@color/icon_background" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="12dp"
+        android:gravity="center"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="12dp">
+        <bitmap
+            android:src="@drawable/ic_lock_small"
+            android:tint="@color/colorPrimary" />
+    </item>
+
+</layer-list>

@@ -1,0 +1,60 @@
+@startuml
+title Draw custom or aggregate mark
+
+(*) --> "archiveMarks"
+if "have marks\nand need display their" then
+-right->[true] "for mark in archiveMarks"
+          if "mark gets into\ncurrent timeline" then
+          -->[true] if "aggregateArray\nis empty" then
+                    note right
+                        aggregateArray
+                        contains marks that
+                        should be aggregated
+                        or last single mark
+                    end note
+                    -->[true] "add floatX of mark\nto aggregateArray"
+                    note left
+                        it's first mark
+                        of archiveMarks
+                        added to
+                        aggregateArray
+                    end note
+                    --> ===BEFORE_LAST===
+                    else
+                    -->[false] if "floatX of mark -\naggregateArray.last() < 27dp" then
+                               -->[true] "add mark floatX\nto aggregateArray"
+                               note left
+                                   marks overlap
+                               end note
+                               --> ===BEFORE_LAST===
+                               else
+                               -->[false] if "aggregateArray.size == 1" then
+                                          -->[true] "<b>draw custom mark</b>\n(last mark in aggregateArray)"
+                                          --> "clear aggregateArray and\nadd current mark to aggregateArray"
+                                          else
+                                          -->[false] "<b>draw aggregate marks</b>\n(all marks in aggregateArray)"
+                                          endif
+                               --> "clear aggregateArray and\nadd current mark to aggregateArray"
+                               endif
+                    endif
+                    --> ===BEFORE_LAST===
+                    -right-> if "current mark is last\nin archiveMarks" then
+                        -->[true] if "aggregateArray.size == 1" then
+                                  -->[true] "<b>draw last custom mark</b>\n(last mark in aggregateArray)"
+                                  else
+                                  -->[false] "<b>draw last aggregate marks</b>\n(all marks in aggregateArray)"
+                                  endif
+                        else
+                        -->[false] "for mark in archiveMarks"
+                        endif
+          else
+          -->[false] if "aggregateArray\nis not empty" then
+                     -->[true] ===BEFORE_LAST===
+                     else
+                     -->[false] "<b>not draw mark</b>"
+                     endif
+          endif
+else
+-->[false] "<b>not draw mark</b>"
+endif
+@enduml

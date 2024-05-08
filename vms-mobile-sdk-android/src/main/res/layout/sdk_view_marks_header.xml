@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/marksHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cameraEmptyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/bg_blue_round_20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_12dp"
+            android:paddingTop="@dimen/_6dp"
+            android:paddingEnd="@dimen/_12dp"
+            android:paddingBottom="@dimen/_6dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/viewEmptyMarks"
+            layout="@layout/sdk_view_empty_marks" />
+
+        <LinearLayout
+            android:id="@+id/marksNoPermission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmptyMarksHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_empty_marks" />
+
+            <TextView
+                android:id="@+id/noPermissionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_20sp" />
+
+            <TextView
+                android:id="@+id/noPermissionMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/_ACAFB8"
+                android:textSize="@dimen/_14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/marksNoPermissionCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/bg_white_round_8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_42dp"
+            android:paddingTop="@dimen/_32dp"
+            android:paddingEnd="@dimen/_42dp"
+            android:paddingBottom="@dimen/_32dp"
+            android:visibility="gone">
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/noPermissionCameraTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_20sp" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:id="@+id/noPermissionCameraMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/_ACAFB8"
+                android:textSize="@dimen/_14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

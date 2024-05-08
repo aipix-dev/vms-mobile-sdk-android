@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="Base.Theme.VMSMobileSDK" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.VMSMobileSDK" parent="Base.Theme.VMSMobileSDK" />
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrBottomBarNav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/time_bar_h_navigation"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:background="@color/_1F2128_90"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCalendar"
+            style="@style/ClickRippleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivSoundArchive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSoundArchive"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_46dp"
+            android:layout_height="@dimen/_46dp"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_sound_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/moveLeft"
+            app:layout_constraintStart_toEndOf="@+id/imgCalendar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/moveLeft"
+            style="@style/ClickRippleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_video_to_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lnrBottomButtonsLeft"
+            app:layout_constraintStart_toEndOf="@+id/ivSoundArchive"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lnrBottomButtonsLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgPlay"
+            app:layout_constraintStart_toEndOf="@+id/moveLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/moveLeftOneDay"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="-24H"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveLeftOneHour"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="-1H"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveLeftOneMinute"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="-1M"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveLeftFiveSeconds"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="-5S"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgPlay"
+            style="@style/ClickRippleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dp"
+            app:srcCompat="@drawable/bt_pause"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lnrBottomButtonsRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/moveRight"
+            app:layout_constraintStart_toEndOf="@+id/imgPlay"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/moveRightFiveSeconds"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="+5S"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveRightOneMinute"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="+1M"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveRightOneHour"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="+1H"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/moveRightOneDay"
+                style="@style/ClickRippleBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_bottom_buttons"
+                android:text="+24H"
+                android:textColor="@color/_E4E6E8"
+                android:textSize="@dimen/_sp_move_right_left"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/moveRight"
+            style="@style/ClickRippleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_video_to_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivScreenshot"
+            app:layout_constraintStart_toEndOf="@+id/lnrBottomButtonsRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivScreenshot"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_46dp"
+            android:layout_height="@dimen/_46dp"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_screenshot_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivMoreArchive"
+            app:layout_constraintStart_toEndOf="@+id/moveRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMoreArchive"
+            style="@style/ClickRippleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:padding="@dimen/padding_bottom_buttons"
+            app:srcCompat="@drawable/ic_camera_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivScreenshot"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

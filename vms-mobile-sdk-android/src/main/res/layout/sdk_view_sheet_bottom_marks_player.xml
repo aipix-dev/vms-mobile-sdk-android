@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/viewBottomMarksPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner_top"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <include
+            android:id="@+id/viewTopBottomSheet"
+            layout="@layout/sdk_view_top_bottom_sheet" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_16dp"
+                app:srcCompat="@drawable/ic_mark" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_50dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/txt_black"
+                android:textSize="@dimen/_16sp"
+                app:locTagText="events"
+                tools:text="События" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMarksPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_16dp" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvMarksContinue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:locTagText="apply"
+            tools:text="Применить" />
+
+    </LinearLayout>
+
+</layout>

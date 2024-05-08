@@ -1,0 +1,73 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constViewErrorScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12dp"
+            app:srcCompat="@drawable/ic_technical_work_in_progress"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitleError"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvTitleError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6dp"
+            android:gravity="center"
+            android:maxLength="100"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/_20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:locTagText="technical_error_title"
+            tools:text="Title" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvSubtitleError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6dp"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/_36dp"
+            android:paddingEnd="@dimen/_36dp"
+            android:textColor="@color/input"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleError"
+            app:locTagText="error_try_later"
+            tools:text=" SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle SubTitle" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvActionErrorHandler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/_12dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:locTagText="error_reload"
+            tools:text="SubTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

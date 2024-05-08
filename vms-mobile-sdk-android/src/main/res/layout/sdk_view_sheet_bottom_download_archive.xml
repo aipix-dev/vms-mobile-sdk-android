@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/viewBottomDownloadArchive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner_top"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        tools:visibility="invisible">
+
+        <include
+            android:id="@+id/viewTopBottomSheet"
+            layout="@layout/sdk_view_top_bottom_sheet" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16dp"
+            android:textColor="@color/_131418"
+            android:textSize="@dimen/_16dp"
+            app:locTagText="download_archive_title"
+            tools:text="Выберите временной отрезок для скачаивания (MAX 10 минут)" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/_12dp"
+            app:locTagText="download_archive_description"
+            tools:text="Для скачивания большего отрезка времени зайдите в десктоп приложение" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_22dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:textColor="@color/_A6A6A6"
+            android:textSize="@dimen/_12dp"
+            app:locTagText="download_archive_start"
+            tools:text="Начало периода" />
+
+        <TextView
+            android:id="@+id/tvStartPeriodFull"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@drawable/bg_pas_empty"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="30"
+            android:paddingStart="@dimen/_12dp"
+            android:paddingEnd="@dimen/_40dp"
+            android:singleLine="true"
+            android:textColor="@color/input"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_17sp" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:textColor="@color/_A6A6A6"
+            android:textSize="@dimen/_12dp"
+            app:locTagText="download_archive_end"
+            tools:text="Конец периода" />
+
+        <TextView
+            android:id="@+id/tvEndPeriodFull"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@drawable/bg_pas_empty"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="30"
+            android:paddingStart="@dimen/_12dp"
+            android:paddingEnd="@dimen/_40dp"
+            android:singleLine="true"
+            android:textColor="@color/input"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_17sp" />
+
+        <LinearLayout
+            android:id="@+id/btDownloadArchive"
+            style="@style/ClickRippleFrontBorderless"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_margin="@dimen/_16dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                app:srcCompat="@drawable/ic_download_archive"
+                app:tint="@color/colorPrimary" />
+
+            <com.mobile.vms.player.customviews.VMSLocalizedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_131418"
+                android:textSize="@dimen/_16dp"
+                app:locTagText="download_archive"
+                tools:text="Скачать участок архива" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

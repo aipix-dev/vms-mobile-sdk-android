@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/viewBottomList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner_top"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <include
+            android:id="@+id/viewTopBottomSheet"
+            layout="@layout/sdk_view_top_bottom_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBottomList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:clipToPadding="false" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_40dp"
+            android:textColor="@color/txt_gray"
+            android:visibility="gone"
+            app:locTagText="no_intercoms"
+            tools:text="Домофонов еще нет" />
+
+    </LinearLayout>
+
+</layout>

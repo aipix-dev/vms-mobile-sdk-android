@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/itemSpeeds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52dp">
+
+        <FrameLayout
+            android:id="@+id/lnrSpeedItem"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_16dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_13dp"
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/ic_speed" />
+
+            <TextView
+                android:id="@+id/tvSpeedCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_11dp"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal|top"
+                android:text="1x"
+                android:textSize="@dimen/_10sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCheckSpeed"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_16dp"
+            app:srcCompat="@drawable/ic_check_speed"
+            android:visibility="gone"
+            app:tint="@color/colorPrimary" />
+
+        <com.mobile.vms.player.customviews.VMSLocalizedTextView
+            android:id="@+id/tvNameItemSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_50dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:locTagText="speeds_title" />
+
+    </FrameLayout>
+
+</layout>

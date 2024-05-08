@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/icon_background" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/_35dp"
+        android:left="@dimen/_55dp"
+        android:right="@dimen/_55dp"
+        android:top="@dimen/_35dp">
+        <bitmap
+            android:src="@drawable/ic_empty_mark_preview"
+            android:tint="@color/colorPrimary" />
+    </item>
+</layer-list>

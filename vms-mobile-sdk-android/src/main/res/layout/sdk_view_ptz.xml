@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/mainPtz"
+        android:layout_width="180dp"
+        android:layout_height="228dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:background="@drawable/bg_ptz"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPtzUp"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:background="@drawable/circle_ptz"
+            android:padding="@dimen/_12dp"
+            android:rotation="270"
+            app:srcCompat="@drawable/ic_arrow_ptz" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPtzReset"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_below="@+id/ivPtzUp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/ptz_margin"
+            android:background="@drawable/circle_ptz"
+            android:padding="@dimen/_12dp"
+            android:rotation="270"
+            app:srcCompat="@drawable/ic_ptz_reset" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPtzLeft"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_below="@+id/ivPtzUp"
+            android:layout_margin="@dimen/ptz_margin"
+            android:layout_toStartOf="@+id/ivPtzReset"
+            android:background="@drawable/circle_ptz"
+            android:padding="@dimen/_12dp"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_arrow_ptz" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPtzRight"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_below="@+id/ivPtzUp"
+            android:layout_margin="@dimen/ptz_margin"
+            android:layout_toEndOf="@+id/ivPtzReset"
+            android:background="@drawable/circle_ptz"
+            android:padding="@dimen/_12dp"
+            app:srcCompat="@drawable/ic_arrow_ptz" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPtzDown"
+            style="@style/ClickRippleBack"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_48dp"
+            android:layout_below="@+id/ivPtzReset"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/ptz_margin"
+            android:background="@drawable/circle_ptz"
+            android:padding="@dimen/_12dp"
+            android:rotation="90"
+            app:srcCompat="@drawable/ic_arrow_ptz" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPtzDown"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPtzZoomOut"
+                style="@style/ClickRippleBack"
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:background="@drawable/circle_ptz"
+                android:padding="@dimen/_12dp"
+                app:srcCompat="@drawable/ic_ptz_zoom_out" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPtzZoomIn"
+                style="@style/ClickRippleBack"
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:background="@drawable/circle_ptz"
+                android:padding="@dimen/_12dp"
+                app:srcCompat="@drawable/ic_ptz_zoom_in" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
